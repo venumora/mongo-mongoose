@@ -6,7 +6,6 @@ module.exports = function(APP) {
     request.get(
         `http://${req.headers.host}/api/headlines`, function(err, resp, headlines) {
           if (!err) {
-            console.log(headlines)
             res.render('home', {headlines: JSON.parse(headlines)});
           } else {
             res.status(500).send({error: 'Internal Server Error'});
@@ -26,7 +25,14 @@ module.exports = function(APP) {
         });
   });
 
-  APP.get('/saved-articles', function(req, res) {
-    res.render('saved');
+  APP.get('/saved', function(req, res) {
+    request.get(
+      `http://${req.headers.host}/api/headlines/saved`, function(err, resp, headlines) {
+        if (!err) {
+          res.render('saved', {headlines: JSON.parse(headlines)});
+        } else {
+          res.status(500).send({error: 'Internal Server Error'});
+        }
+      });
   });
 };

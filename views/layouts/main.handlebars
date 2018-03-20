@@ -18,13 +18,13 @@
             <a id="logo-container" href="/" class="brand-logo">Mongo Headlines</a>
             <ul class="right hide-on-med-and-down">
                 <li>
-                    <a href="/saved-articles">Saved Articles</a>
+                    <a href="/saved">Saved Articles</a>
                 </li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li>
-                    <a href="/saved-articles">Saved Articles</a>
+                    <a href="/saved">Saved Articles</a>
                 </li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse">
@@ -38,7 +38,7 @@
             <p>Sorry something went wrong in our server! Please try later</p>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="/" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
 
@@ -49,6 +49,24 @@
         </div>
         <div class="modal-footer">
             <a href="/" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="loading" style="width: 150px; height: 150px; background-color: transparent;-webkit-box-shadow: none; box-shadow: none;" class="modal">
+        <div class="modal-content">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     {{{ body }}}

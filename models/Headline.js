@@ -18,10 +18,10 @@ const HeadlineSchema = new Schema({
     required: true,
     default: false
   },
-  note: {
+  notes: [{
     type: Schema.Types.ObjectId,
     ref: "Note"
-  }
+  }]
 });
 
 const Headline = mongoose.model("Headline", HeadlineSchema);

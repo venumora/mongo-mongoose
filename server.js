@@ -22,6 +22,10 @@ MONGOOSE.connect(MONGODB_URI);
 require('./routes/api')(APP);
 require('./routes/view')(APP);
 
+APP.use(function (err, req, res, next) {
+  res.render('servererror');
+})
+
 APP.listen(PORT, function() {
   console.log('APP running on port ' + PORT + '!');
 });
